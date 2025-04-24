@@ -1,25 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.geometry.*?>
+<?import javafx.geometry.Insets?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.ecotravelplanner.DashboardController">
-    <VBox alignment="TOP_CENTER" spacing="20.0" layoutX="50" layoutY="30" prefWidth="600" prefHeight="500">
-        <Label text="My Trips" style="-fx-font-size: 20px; -fx-font-weight: bold;" />
-        <ListView fx:id="tripList" prefHeight="150.0" />
+<VBox spacing="20" xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.ecotravelplanner.DashboardController">
+    <padding><Insets top="30" left="50" right="50" bottom="30"/></padding>
 
-        <HBox alignment="CENTER" spacing="30">
-            <VBox alignment="CENTER">
-                <Label text="Achievements" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
-                <Label fx:id="achievement1" />
-            </VBox>
-            <VBox alignment="CENTER">
-                <Label text="Achievements" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
-                <Label fx:id="achievement2" />
-            </VBox>
-        </HBox>
+    <Label text="Hello, User" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
 
-        <Button text="Plan New Route" onAction="#handleLogin" />
-    </VBox>
-</AnchorPane>
+    <Label text="Your Trips" style="-fx-font-weight: bold;"/>
+    <ListView fx:id="tripList" prefHeight="100"/>
+
+    <Label text="Carbon Footprint Saved" style="-fx-font-weight: bold;"/>
+    <HBox spacing="20">
+        <VBox>
+            <Label text="Graph" style="-fx-border-color: lightgray; -fx-padding: 20;"/>
+        </VBox>
+        <VBox>
+            <Label text="5 Eco Tips" style="-fx-font-size: 14px; -fx-font-weight: bold;"/>
+            <Label text="Use public transport for longer journeys." wrapText="true"/>
+        </VBox>
+    </HBox>
+
+    <Label text="Badges and Tips"/>
+    <Label fx:id="achievement1"/>
+    <Label fx:id="achievement2"/>
+</VBox>
 

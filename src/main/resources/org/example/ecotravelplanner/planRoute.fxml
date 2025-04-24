@@ -1,17 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.geometry.*?>
+<?import javafx.geometry.Insets?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.ecotravelplanner.PlanRouteController">
-    <VBox alignment="CENTER" spacing="15.0" layoutX="50" layoutY="30" prefWidth="600" prefHeight="500">
-        <Label text="Plan Route" style="-fx-font-size: 22px; -fx-font-weight: bold;" />
-        <TextField fx:id="startingPoint" promptText="Enter starting point" />
-        <TextField fx:id="destination" promptText="Enter destination" />
-        <ChoiceBox fx:id="transportOption" />
-        <Button text="Build Route" onAction="#handleBuildRoute" />
-        <Label fx:id="emissionLabel" text="Carbon Emission:" />
-        <Label fx:id="weatherLabel" text="Weather:" />
-    </VBox>
-</AnchorPane>
+<VBox spacing="20.0" alignment="TOP_CENTER" xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.ecotravelplanner.PlanRouteController">
+    <padding><Insets top="30" left="50" right="50" bottom="30"/></padding>
+
+    <Label text="Enter your starting point" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+
+    <TextField fx:id="startingPoint" promptText="Enter starting location"/>
+    <TextField fx:id="destination" promptText="Enter destination"/>
+
+    <HBox spacing="10">
+        <Button text="Walking\n0.4 kg CO₂, 40 min" style="-fx-background-color: #a5d6a7;"/>
+        <Button text="Bicycle\n0.1 kg CO₂, 19 min"/>
+        <Button text="Public Transport\n0.7 kg CO₂, 23 min"/>
+    </HBox>
+
+    <Region style="-fx-border-color: lightgray; -fx-min-height: 200; -fx-min-width: 400; -fx-background-color: #f0f0f0;" />
+
+    <Button text="Get Directions" onAction="#handleBuildRoute" style="-fx-background-color: #2e7d32; -fx-text-fill: white;"/>
+
+    <Label fx:id="emissionLabel"/>
+    <Label fx:id="weatherLabel"/>
+</VBox>
 
