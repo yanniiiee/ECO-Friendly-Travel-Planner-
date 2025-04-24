@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.ecotravelplanner.PlanRouteController">
+    <VBox alignment="CENTER" spacing="15.0" layoutX="50" layoutY="30" prefWidth="600" prefHeight="500">
+        <Label text="Plan Route" style="-fx-font-size: 22px; -fx-font-weight: bold;" />
+        <TextField fx:id="startingPoint" promptText="Enter starting point" />
+        <TextField fx:id="destination" promptText="Enter destination" />
+        <ChoiceBox fx:id="transportOption" />
+        <Button text="Build Route" onAction="#handleBuildRoute" />
+        <Label fx:id="emissionLabel" text="Carbon Emission:" />
+        <Label fx:id="weatherLabel" text="Weather:" />
+    </VBox>
+</AnchorPane>
+

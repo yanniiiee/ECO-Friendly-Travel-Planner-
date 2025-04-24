@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.ecotravelplanner.DashboardController">
+    <VBox alignment="TOP_CENTER" spacing="20.0" layoutX="50" layoutY="30" prefWidth="600" prefHeight="500">
+        <Label text="My Trips" style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+        <ListView fx:id="tripList" prefHeight="150.0" />
+
+        <HBox alignment="CENTER" spacing="30">
+            <VBox alignment="CENTER">
+                <Label text="Achievements" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+                <Label fx:id="achievement1" />
+            </VBox>
+            <VBox alignment="CENTER">
+                <Label text="Achievements" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+                <Label fx:id="achievement2" />
+            </VBox>
+        </HBox>
+
+        <Button text="Plan New Route" onAction="#handleLogin" />
+    </VBox>
+</AnchorPane>
+
