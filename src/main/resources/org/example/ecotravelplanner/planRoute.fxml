@@ -12,11 +12,17 @@
     <TextField fx:id="startingPoint" promptText="Enter starting location"/>
     <TextField fx:id="destination" promptText="Enter destination"/>
 
+    <AnchorPane>
+        <WebView fx:id="mapView" layoutX="10" layoutY="150" prefHeight="400" prefWidth="600" />
+    </AnchorPane>
+
     <HBox spacing="10">
         <Button text="Walking\n0.4 kg CO₂, 40 min" style="-fx-background-color: #a5d6a7;"/>
         <Button text="Bicycle\n0.1 kg CO₂, 19 min"/>
         <Button text="Public Transport\n0.7 kg CO₂, 23 min"/>
     </HBox>
+    <ChoiceBox fx:id="transportOption" />
+
 
     <Region style="-fx-border-color: lightgray; -fx-min-height: 200; -fx-min-width: 400; -fx-background-color: #f0f0f0;" />
 
